@@ -14,6 +14,7 @@
 ```bash
 git clone https://github.com/hardingadonis/dotfiles.git --depth 1
 cd dotfiles
+chmod +x setup.sh
 ./setup.sh
 ```
 
