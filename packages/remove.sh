@@ -3,17 +3,17 @@
 echo "Remove meld"
 yay -Rsnc meld --noconfirm
 
-echo "Remove kate"
-yay -Rsnc kate --noconfirm
+echo "Remove gnome-weather"
+yay -Rsnc gnome-weather --noconfirm
 
-echo "Remove okular"
-yay -Rsnc okular --noconfirm
+echo "Remove avahi"
+yay -Rsnc avahi --noconfirm
 
 echo "Remove firefox"
 yay -Rsnc firefox --noconfirm
 
-echo "Remove haruna"
-yay -Rsnc haruna --noconfirm
+echo "Remove gnome-usage"
+yay -Rsnc gnome-usage --noconfirm
 
 echo "Remove mpv"
 yay -Rsnc mpv --noconfirm
@@ -21,8 +21,6 @@ yay -Rsnc mpv --noconfirm
 echo "Remove yad"
 yay -Rsnc yad --noconfirm
 
-echo "Remove kwrited"
-yay -Rsnc kwrited --noconfirm
 
 echo "Remove uxterm"
 yay -Rsnc uxterm --noconfirm
