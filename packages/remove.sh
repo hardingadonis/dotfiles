@@ -9,9 +9,6 @@ yay -Rsnc gnome-weather --noconfirm
 echo "Remove gnome-terminal"
 yay -Rsnc gnome-terminal --noconfirm
 
-echo "Remove avahi"
-yay -Rsnc avahi --noconfirm
-
 echo "Remove firefox"
 yay -Rsnc firefox --noconfirm
 
