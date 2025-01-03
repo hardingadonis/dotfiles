@@ -6,6 +6,9 @@ yay -Rsnc meld --noconfirm
 echo "Remove gnome-weather"
 yay -Rsnc gnome-weather --noconfirm
 
+echo "Remove gnome-terminal"
+yay -Rsnc gnome-terminal --noconfirm
+
 echo "Remove avahi"
 yay -Rsnc avahi --noconfirm
 
@@ -20,7 +23,6 @@ yay -Rsnc mpv --noconfirm
 
 echo "Remove yad"
 yay -Rsnc yad --noconfirm
-
 
 echo "Remove uxterm"
 yay -Rsnc uxterm --noconfirm
