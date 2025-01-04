@@ -133,3 +133,27 @@ if ! is_installed "lazydocker"; then
 else
 	echo "lazydocker is already installed. Skipping."
 fi
+
+# Install vlc
+if ! is_installed "vlc"; then
+	echo "Installing vlc..."
+	yay -S vlc --noconfirm
+else
+	echo "vlc is already installed. Skipping."
+fi
+
+# Install virtualbox
+if ! is_installed "virtualbox"; then
+	echo "Installing virtualbox..."
+	yay -S virtualbox --noconfirm
+else
+	echo "virtualbox is already installed. Skipping."
+fi
+
+# Install cloudflare-warp-bin
+if ! is_installed "cloudflare-warp-bin"; then
+	echo "Installing cloudflare-warp-bin..."
+	yay -S cloudflare-warp-bin --noconfirm
+else
+	echo "cloudflare-warp-bin is already installed. Skipping."
+fi
