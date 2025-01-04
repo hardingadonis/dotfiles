@@ -157,3 +157,31 @@ if ! is_installed "rclone"; then
 else
 	echo "rclone is already installed. Skipping."
 fi
+
+# Install zsh
+if ! is_installed "zsh"; then
+	echo "Installing zsh..."
+	yay -S zsh --noconfirm
+	chsh -s $(which zsh)
+else
+	echo "zsh is already installed. Skipping."
+fi
+
+# Install noto-fonts-emoji
+if ! is_installed "noto-fonts-emoji"; then
+	echo "Installing noto-fonts-emoji..."
+	yay -S noto-fonts-emoji --noconfirm
+else
+	echo "noto-fonts-emoji is already installed. Skipping."
+fi
+
+# Install zsh-theme-powerlevel10k-git
+if ! is_installed "zsh-theme-powerlevel10k-git"; then
+	echo "Installing zsh-theme-powerlevel10k-git..."
+	yay -S zsh-theme-powerlevel10k-git --noconfirm
+	echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+	exec zsh
+	p10k configure
+else
+	echo "zsh-theme-powerlevel10k-git is already installed. Skipping."
+fi
