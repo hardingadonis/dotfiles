@@ -185,3 +185,15 @@ if ! is_installed "zsh-theme-powerlevel10k-git"; then
 else
 	echo "zsh-theme-powerlevel10k-git is already installed. Skipping."
 fi
+
+# Config for zsh
+# Check if ~/.zshrc exists and contains the bindkey configuration
+if [ -f ~/.zshrc ]; then
+	if ! grep -q 'bindkey "^[[3~" delete-char' ~/.zshrc; then
+		echo 'bindkey "^[[3~" delete-char' >> ~/.zshrc
+	else
+		echo 'bindkey configuration already exists in ~/.zshrc. Skipping.'
+	fi
+else
+	echo 'bindkey "^[[3~" delete-char' >> ~/.zshrc
+fi
