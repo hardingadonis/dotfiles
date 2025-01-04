@@ -149,11 +149,3 @@ if ! is_installed "virtualbox"; then
 else
 	echo "virtualbox is already installed. Skipping."
 fi
-
-# Install cloudflare-warp-bin
-if ! is_installed "cloudflare-warp-bin"; then
-	echo "Installing cloudflare-warp-bin..."
-	yay -S cloudflare-warp-bin --noconfirm
-else
-	echo "cloudflare-warp-bin is already installed. Skipping."
-fi
