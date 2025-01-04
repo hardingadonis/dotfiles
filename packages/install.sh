@@ -184,6 +184,15 @@ else
 	echo "zsh-theme-powerlevel10k-git is already installed. Skipping."
 fi
 
+# Install zsh-syntax-highlighting
+if ! is_installed "zsh-syntax-highlighting"; then
+	echo "Installing zsh-syntax-highlighting..."
+	yay -S zsh-syntax-highlighting --noconfirm
+	echo 'source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>~/.zshrc
+else
+	echo "zsh-syntax-highlighting is already installed. Skipping."
+fi
+
 # Config for zsh
 # Check if ~/.zshrc exists and contains the bindkey configuration
 if [ -f ~/.zshrc ]; then
