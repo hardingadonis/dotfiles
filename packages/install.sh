@@ -149,3 +149,11 @@ if ! is_installed "virtualbox"; then
 else
 	echo "virtualbox is already installed. Skipping."
 fi
+
+# Install rclone
+if ! is_installed "rclone"; then
+	echo "Installing rclone..."
+	yay -S rclone --noconfirm
+else
+	echo "rclone is already installed. Skipping."
+fi
