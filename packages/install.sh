@@ -76,3 +76,60 @@ if ! is_installed "obsidian"; then
 else
   echo "obsidian is already installed. Skipping."
 fi
+
+# Install btop
+if ! is_installed "btop"; then
+	echo "Installing btop..."
+	yay -S btop --noconfirm
+else
+	echo "btop is already installed. Skipping."
+fi
+
+# Install fastfetch
+if ! is_installed "fastfetch"; then
+	echo "Installing fastfetch..."
+	yay -S fastfetch --noconfirm
+else
+	echo "fastfetch is already installed. Skipping."
+fi
+
+# Install docker
+if ! is_installed "docker"; then
+	echo "Installing docker..."
+	yay -S docker --noconfirm
+else
+	echo "docker is already installed. Skipping."
+fi
+
+# Install docker-compose
+if ! is_installed "docker-compose"; then
+	echo "Installing docker-compose..."
+	yay -S docker-compose --noconfirm
+else
+	echo "docker-compose is already installed. Skipping."
+fi
+
+# Install docker-buildx
+if ! is_installed "docker-buildx"; then
+	echo "Installing docker-buildx..."
+	yay -S docker-buildx --noconfirm
+else
+	echo "docker-buildx is already installed. Skipping."
+fi
+
+# Enable and start docker if it is disabled
+if systemctl is-enabled --quiet docker; then
+	echo "Docker is already enabled."
+else
+	echo "Enabling and starting Docker..."
+	sudo systemctl enable docker
+	sudo systemctl start docker
+fi
+
+# Install lazydocker
+if ! is_installed "lazydocker"; then
+	echo "Installing lazydocker..."
+	yay -S lazydocker --noconfirm
+else
+	echo "lazydocker is already installed. Skipping."
+fi
