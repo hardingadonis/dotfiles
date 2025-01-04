@@ -167,37 +167,11 @@ else
 	echo "zsh is already installed. Skipping."
 fi
 
-# Install noto-fonts
-if ! is_installed "noto-fonts"; then
-	echo "Installing noto-fonts..."
-	yay -S noto-fonts --noconfirm
-else
-	echo "noto-fonts is already installed. Skipping."
-fi
-
-# Install noto-fonts-emoji
-if ! is_installed "noto-fonts-emoji"; then
-	echo "Installing noto-fonts-emoji..."
-	yay -S noto-fonts-emoji --noconfirm
-else
-	echo "noto-fonts-emoji is already installed. Skipping."
-fi
-
-# Install noto-fonts-extra
-if ! is_installed "noto-fonts-extra"; then
-	echo "Installing noto-fonts-extra..."
-	yay -S noto-fonts-extra --noconfirm
-else
-	echo "noto-fonts-extra is already installed. Skipping."
-fi
-
-# Install awesome-terminal-fonts
-if ! is_installed "awesome-terminal-fonts"; then
-	echo "Installing awesome-terminal-fonts..."
-	yay -S awesome-terminal-fonts --noconfirm
-else
-	echo "awesome-terminal-fonts is already installed. Skipping."
-fi
+# Install fonts from ryanoasis/nerd-fonts
+git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
+chmod +x nerd-fonts/install.sh
+./nerd-fonts/install.sh
+rm -rf nerd-fonts
 
 # Install zsh-theme-powerlevel10k-git
 if ! is_installed "zsh-theme-powerlevel10k-git"; then
