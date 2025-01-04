@@ -150,6 +150,14 @@ else
 	echo "virtualbox is already installed. Skipping."
 fi
 
+# Install gnome-extensions-cli
+if ! is_installed "gnome-extensions-cli"; then
+	echo "Installing gnome-extensions-cli..."
+	yay -S gnome-extensions-cli --noconfirm
+else
+	echo "gnome-extensions-cli is already installed. Skipping."
+fi
+
 # Install rclone
 if ! is_installed "rclone"; then
 	echo "Installing rclone..."
