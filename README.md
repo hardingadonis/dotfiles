@@ -8,6 +8,7 @@
 
 - **OS**: EndeavourOS
 - **DE**: GNOME
+- **Laptop**: MSI Modern 15 A5M 239VN
 
 ## Installation
 
