@@ -2,12 +2,13 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/hardingadonis/dotfiles)
 
-> My dotfiles for EndeavourOS - KDE Plasma
+> My dotfiles for EndeavourOS - GNOME
 
 ## OS Information
 
 - **OS**: EndeavourOS
-- **DE**: KDE Plasma
+- **DE**: GNOME
+- **Laptop**: MSI Modern 15 A5M 239VN
 
 ## Installation
 
