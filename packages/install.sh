@@ -189,11 +189,15 @@ fi
 # Config for zsh
 # Check if ~/.zshrc exists and contains the bindkey configuration
 if [ -f ~/.zshrc ]; then
-	if ! grep -q 'bindkey "^[[3~" delete-char' ~/.zshrc; then
-		echo 'bindkey "^[[3~" delete-char' >> ~/.zshrc
-	else
-		echo 'bindkey configuration already exists in ~/.zshrc. Skipping.'
-	fi
+    # Check if the bindkey configuration already exists
+    if ! grep -q 'bindkey "\^\[\[3~" delete-char' ~/.zshrc; then
+        echo 'bindkey "^[[3~" delete-char' >> ~/.zshrc
+        echo 'bindkey configuration added to ~/.zshrc.'
+    else
+        echo 'bindkey configuration already exists in ~/.zshrc. Skipping.'
+    fi
 else
-	echo 'bindkey "^[[3~" delete-char' >> ~/.zshrc
+    # If .zshrc doesn't exist, create it and add the configuration
+    echo 'bindkey "^[[3~" delete-char' > ~/.zshrc
+    echo 'bindkey configuration added to newly created ~/.zshrc.'
 fi
