@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Config for git
-cp -f ./.gitconfig ~/.gitconfig
+cp -f ./config/.gitconfig ~/.gitconfig
