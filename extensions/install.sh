@@ -14,6 +14,3 @@ gext install 2087
 
 # Install Soft Brightness Plus
 gext install 5943
-
-# Install Radio Kayra
-gext install 7649
