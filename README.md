@@ -23,8 +23,9 @@ chmod +x setup.sh
 
 ```bash
 dotfiles/         # dotfiles repository
-├─ packages/      # list of packages to install
 ├─ config/        # configuration files
+├─ extensions/    # install GNOME extensions
+├─ packages/      # list of packages to install
 ├─ setup.sh       # setup script
 ```
 
