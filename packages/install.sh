@@ -170,7 +170,6 @@ fi
 if ! is_installed "zsh"; then
 	echo "Installing zsh..."
 	yay -S zsh --noconfirm
-	chsh -s $(which zsh)
 else
 	echo "zsh is already installed. Skipping."
 fi
@@ -186,8 +185,6 @@ if ! is_installed "zsh-theme-powerlevel10k-git"; then
 	echo "Installing zsh-theme-powerlevel10k-git..."
 	yay -S zsh-theme-powerlevel10k-git --noconfirm
 	echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-	exec zsh
-	p10k configure
 else
 	echo "zsh-theme-powerlevel10k-git is already installed. Skipping."
 fi
