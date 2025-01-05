@@ -24,6 +24,11 @@ echo "Configuring the system..."
 chmod +x config/config.sh
 bash ./config/config.sh
 
+# Clear the cache
+echo "Clearing the cache..."
+yay -Yc --noconfirm
+yay -Sc --noconfirm
+
 # Confirm the installation
 echo "Installation complete!"
 echo "Reboot the system to apply changes."
