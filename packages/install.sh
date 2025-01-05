@@ -216,3 +216,12 @@ else
     echo 'bindkey "^[[3~" delete-char' > ~/.zshrc
     echo 'bindkey configuration added to newly created ~/.zshrc.'
 fi
+
+# Install nvm
+if ! is_installed "nvm"; then
+	echo "Installing nvm..."
+	yay -S nvm --noconfirm
+	echo 'source /usr/share/nvm/init-nvm.sh' >>~/.zshrc
+else
+	echo "nvm is already installed. Skipping."
+fi
