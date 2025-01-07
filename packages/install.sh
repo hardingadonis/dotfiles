@@ -245,3 +245,11 @@ if ! is_installed "nvm"; then
 else
 	echo "nvm is already installed. Skipping."
 fi
+
+# Install gnome-network-displays
+if ! is_installed "gnome-network-displays"; then
+	echo "Installing gnome-network-displays..."
+	yay -S gnome-network-displays --noconfirm
+else
+	echo "gnome-network-displays is already installed. Skipping."
+fi
