@@ -52,6 +52,14 @@ else
   echo "google-chrome is already installed. Skipping."
 fi
 
+# Install git lfs
+if ! is_installed "git-lfs"; then
+	echo "Installing git-lfs..."
+	yay -S git-lfs --noconfirm
+else
+	echo "git-lfs is already installed. Skipping."
+fi
+
 # Install gitkraken
 if ! is_installed "gitkraken"; then
   echo "Installing gitkraken..."
