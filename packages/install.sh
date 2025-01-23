@@ -56,6 +56,7 @@ fi
 if ! is_installed "git-lfs"; then
 	echo "Installing git-lfs..."
 	yay -S git-lfs --noconfirm
+	git lfs install
 else
 	echo "git-lfs is already installed. Skipping."
 fi
