@@ -28,6 +28,14 @@ is_installed() {
   yay -Q "$1" &>/dev/null
 }
 
+# Install pacseek
+if ! is_installed "pacseek"; then
+	echo "Installing pacseek..."
+	yay -S pacseek --noconfirm
+else
+	echo "pacseek is already installed. Skipping."
+fi
+
 # Install ibus-bamboo
 if ! is_installed "ibus-bamboo"; then
   echo "Installing ibus-bamboo..."
