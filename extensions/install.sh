@@ -34,3 +34,6 @@ gext install 307
 
 # Install Soft Brightness Plus
 gext install 5943
+
+# Install AppIndicator and KStatusNotifierItem Support
+gext install 615
