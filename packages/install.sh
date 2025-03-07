@@ -28,22 +28,6 @@ is_installed() {
   yay -Q "$1" &>/dev/null
 }
 
-# Install pacseek
-if ! is_installed "pacseek"; then
-	echo "Installing pacseek..."
-	yay -S pacseek --noconfirm
-else
-	echo "pacseek is already installed. Skipping."
-fi
-
-# Install ibus-bamboo
-if ! is_installed "ibus-bamboo"; then
-  echo "Installing ibus-bamboo..."
-  yay -S ibus-bamboo --noconfirm
-else
-  echo "ibus-bamboo is already installed. Skipping."
-fi
-
 # Install visual-studio-code-bin
 if ! is_installed "visual-studio-code-bin"; then
   echo "Installing visual-studio-code-bin..."
@@ -190,68 +174,12 @@ else
 	echo "virtualbox is already installed. Skipping."
 fi
 
-# Install gnome-extensions-cli
-if ! is_installed "gnome-extensions-cli"; then
-	echo "Installing gnome-extensions-cli..."
-	yay -S gnome-extensions-cli --noconfirm
-else
-	echo "gnome-extensions-cli is already installed. Skipping."
-fi
-
 # Install rclone
 if ! is_installed "rclone"; then
 	echo "Installing rclone..."
 	yay -S rclone --noconfirm
 else
 	echo "rclone is already installed. Skipping."
-fi
-
-# Install zsh
-if ! is_installed "zsh"; then
-	echo "Installing zsh..."
-	yay -S zsh --noconfirm
-else
-	echo "zsh is already installed. Skipping."
-fi
-
-# Install fonts from ryanoasis/nerd-fonts
-git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
-chmod +x nerd-fonts/install.sh
-./nerd-fonts/install.sh
-rm -rf nerd-fonts
-
-# Install zsh-theme-powerlevel10k-git
-if ! is_installed "zsh-theme-powerlevel10k-git"; then
-	echo "Installing zsh-theme-powerlevel10k-git..."
-	yay -S zsh-theme-powerlevel10k-git --noconfirm
-	echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-else
-	echo "zsh-theme-powerlevel10k-git is already installed. Skipping."
-fi
-
-# Install zsh-syntax-highlighting
-if ! is_installed "zsh-syntax-highlighting"; then
-	echo "Installing zsh-syntax-highlighting..."
-	yay -S zsh-syntax-highlighting --noconfirm
-	echo 'source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >>~/.zshrc
-else
-	echo "zsh-syntax-highlighting is already installed. Skipping."
-fi
-
-# Config for zsh
-# Check if ~/.zshrc exists and contains the bindkey configuration
-if [ -f ~/.zshrc ]; then
-    # Check if the bindkey configuration already exists
-    if ! grep -q 'bindkey "\^\[\[3~" delete-char' ~/.zshrc; then
-        echo 'bindkey "^[[3~" delete-char' >> ~/.zshrc
-        echo 'bindkey configuration added to ~/.zshrc.'
-    else
-        echo 'bindkey configuration already exists in ~/.zshrc. Skipping.'
-    fi
-else
-    # If .zshrc doesn't exist, create it and add the configuration
-    echo 'bindkey "^[[3~" delete-char' > ~/.zshrc
-    echo 'bindkey configuration added to newly created ~/.zshrc.'
 fi
 
 # Install nvm
@@ -261,12 +189,4 @@ if ! is_installed "nvm"; then
 	echo 'source /usr/share/nvm/init-nvm.sh' >>~/.zshrc
 else
 	echo "nvm is already installed. Skipping."
-fi
-
-# Install gnome-network-displays
-if ! is_installed "gnome-network-displays"; then
-	echo "Installing gnome-network-displays..."
-	yay -S gnome-network-displays --noconfirm
-else
-	echo "gnome-network-displays is already installed. Skipping."
 fi
