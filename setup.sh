@@ -25,7 +25,12 @@
 
 # Update the system
 echo "Updating the system..."
-yay -Syu --noconfirm
+sudo pacman -Syu --noconfirm
+
+# Install yay
+echo "Installing yay..."
+chmod +x yay/install.sh
+bash ./yay/install.sh
 
 # Remove unnecessary packages
 echo "Removing unnecessary packages..."
