@@ -31,8 +31,8 @@
 
 ## OS Information
 
-- **OS**: EndeavourOS
-- **DE**: GNOME
+- **OS**: Manjaro
+- **DE**: KDE Plasma
 - **Laptop**: MSI Modern 15 A5M 239VN
 
 ## Installation
@@ -49,7 +49,6 @@ chmod +x setup.sh
 ```bash
 dotfiles/         # dotfiles repository
 ├─ config/        # configuration files
-├─ extensions/    # install GNOME extensions
 ├─ packages/      # list of packages to install
 ├─ setup.sh       # setup script
 ```
