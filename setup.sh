@@ -42,11 +42,6 @@ echo "Installing necessary packages..."
 chmod +x packages/install.sh
 bash ./packages/install.sh
 
-# Install GNOME extensions
-echo "Installing GNOME extensions..."
-chmod +x extensions/install.sh
-bash ./extensions/install.sh
-
 # Configure the system
 echo "Configuring the system..."
 chmod +x config/config.sh
