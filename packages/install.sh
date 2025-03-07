@@ -182,3 +182,11 @@ if ! is_installed "nvm"; then
 else
 	echo "nvm is already installed. Skipping."
 fi
+
+# Install audacity
+if ! is_installed "audacity"; then
+	echo "Installing audacity..."
+	yay -S audacity --noconfirm
+else
+	echo "audacity is already installed. Skipping."
+fi
