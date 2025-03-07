@@ -50,6 +50,7 @@ chmod +x setup.sh
 dotfiles/         # dotfiles repository
 ├─ config/        # configuration files
 ├─ packages/      # list of packages to install
+├─ yay/           # scripts for installing yay
 ├─ setup.sh       # setup script
 ```
 
