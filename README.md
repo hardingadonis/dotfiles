@@ -2,7 +2,7 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/hardingadonis/dotfiles)
 
-> My dotfiles for EndeavourOS - GNOME
+> My dotfiles for Manjaro - KDE Plasma
 
 ```bash
 #                       _oo0oo_
