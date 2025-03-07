@@ -69,14 +69,6 @@ else
   echo "discord is already installed. Skipping."
 fi
 
-# Install dbeaver
-if ! is_installed "dbeaver"; then
-  echo "Installing dbeaver..."
-  yay -S dbeaver --noconfirm
-else
-  echo "dbeaver is already installed. Skipping."
-fi
-
 # Install steam
 if ! is_installed "steam"; then
   echo "Installing steam..."
