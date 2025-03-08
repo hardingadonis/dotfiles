@@ -54,6 +54,10 @@ dotfiles/         # dotfiles repository
 ├─ setup.sh       # setup script
 ```
 
+## My note
+
+- Check [NOTE.md](NOTE.md) for more information.
+
 ## License
 
 - [dotfiles](https://github.com/hardingadonis/dotfiles) is licensed under the [MIT License](LICENSE).
